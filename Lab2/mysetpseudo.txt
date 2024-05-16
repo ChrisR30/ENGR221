@@ -1,0 +1,90 @@
+MySet Class:
+    Attributes:
+        set: list to store values in the set
+        length: integer to store the current number of values in the set
+        max_length: integer to store the maximum length of the set
+
+    Constructor (__init__()):
+        Input: values (list of initial values in the set)
+        Procedure:
+            Initialize set as an empty list
+            Initialize length to 0
+            Initialize max_length to 0
+            For each value in values:
+                Insert the value into the set
+
+    size():
+        Input: None
+        Output: Integer representing the size of the set
+        Procedure:
+            Return the value of length attribute
+
+    vals():
+        Input: None
+        Output: List containing the values in the set
+        Procedure:
+            Return the value of set attribute
+
+    search(value):
+        Input: value (value to search for in the set)
+        Output: Boolean indicating whether the value is in the set
+        Procedure:
+            For each value in set:
+                If the value matches the given value:
+                    Return True
+            If the value is not found:
+                Return False
+
+    insert(value):
+        Input: value (value to be added to the set)
+        Output: None
+        Procedure:
+            If the value is not already in the set:
+                If the length of the set is greater than or equal to max_length:
+                    Increase the size of the set by one
+                Add the value to the end of the set
+                Increment the length attribute
+
+    traverse():
+        Input: None
+        Output: Print the values in the set
+        Procedure:
+            If the set is empty:
+                Print "Set is Empty!"
+            Else:
+                For each value in set:
+                    Print the value
+
+    delete(value):
+        Input: value (value to delete from the set)
+        Output: None
+        Procedure:
+            If the set is empty:
+                Print "Nothing to delete, set is empty!"
+            Else:
+                For each value in set:
+                    If the value matches the given value:
+                        Swap the value with the last value in the set
+                        Update the length attribute by decrementing
+                        Return
+
+    swap(i):
+        Input: i (index of the value to swap)
+        Output: None
+        Procedure:
+            Replace the value at index i with the last value in the set
+            Update the set by removing the last value
+            Decrement the length attribute
+
+    isEmpty():
+        Input: None
+        Output: Boolean indicating whether the set is empty
+        Procedure:
+            If the length of the set is greater than 0:
+                Return False
+            Else:
+                Return True
+
+Main:
+    If this module is executed as the main program:
+        Do nothing (pass)
